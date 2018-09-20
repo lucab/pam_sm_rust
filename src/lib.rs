@@ -3,10 +3,9 @@
 //! # Usage
 //! For example, here is a time based authentication module :
 //!
-//! ```
-//! #[macro_use]
-//! extern crate pamsm;
+//! ```rust,no_run
 //! extern crate time;
+//! #[macro_use] extern crate pamsm;
 //!
 //! use pamsm::{PamServiceModule, Pam, PamFlag, PamError};
 //!
