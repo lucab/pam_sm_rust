@@ -12,7 +12,7 @@
 //! struct PamTime;
 //!
 //! impl PamServiceModule for PamTime {
-//!     fn authenticate(self: &Self, pamh: Pam, _: PamFlag, args: Vec<String>) -> PamError {
+//!     fn authenticate(pamh: Pam, _: PamFlag, args: Vec<String>) -> PamError {
 //!         let hour = time::now().tm_hour;
 //!         if hour != 4 {
 //!             // Only allow authentication when it's 4 AM
@@ -23,7 +23,7 @@
 //!     }
 //! }
 //!
-//! pamsm_init!(Box::new(PamTime));
+//! pam_module!(PamTime);
 //! ```
 
 extern crate libc;
